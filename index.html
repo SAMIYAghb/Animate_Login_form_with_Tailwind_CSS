@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Login form with Tailwind CSS</title>
+    <style>
+        @keyframes imageAnim{
+            0%, 
+            99%{
+                display: block;
+            }
+            100%{
+                display: none;
+            }
+        }
+        #animImg{
+            animation: imageAnim 6s forwards;
+        }
+        @keyframes loginPageAnim{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        #loginPageAnim{
+            animation: loginPageAnim 4s forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- container -->
+    <div class="h-screen flex justify-center items-center gap-x-7" id="loginPage">
+        <!-- login -->
+        <div class="flex flex-col gap-y-5 w-[300px]">
+            <h2 class="text-2xl font-bold text-emerald-600">Login</h2>
+            <form action="" class="flex flex-col gap-y-3 ">
+                <input 
+                class="text-sm p-2 rounded-2xl bg-gray-200 text-gray-600 outline-none tracking-widest" type="text" placeholder="Email"/>
+                <!-- tracking-widest =>letter spacing-->
+                <input 
+                class="text-sm p-2 rounded-2xl bg-gray-200
+                text-gray-600 outline-none tracking-widest" type="password" placeholder="Password"/>
+                <input 
+                class="bg-slate-700 rounded-2xl text-white tracking-widest hover:bg-emerald-600 p-2 font-semibold text-lg" type="submit" value="Login"/>
+            </form>
+            <span class="border-t-2 w-full text-center pt-3">OR</span>
+            <button class="bg-slate-400 rounded-2xl text-white tracking-widest hover:bg-emerald-600 p-2 font-semibold text-sm w-48">
+                <i class='bx bxl-google'></i>
+                <span>Login with Google</span>
+            </button>
+            <a 
+            class="text-blue-400 text-xs font-semibold underline" 
+            href="#">Forgot my password</a>
+            <div class="flex flex-col items-start gap-y-3">
+                <p class="text-xs text-gray-500">If you don't have An Acount. Create:</p>
+                <button class="bg-red-400 text-white px-4 py-1 rounded-2xl text-sm tracking-wider hover:bg-red-500 transition">Register</button>
+            </div>
+        </div>
+        <div class="relative w-[600px] grid place-items-center" >
+            <img class="absolute rounded-2xl" src="images/room.jpg" alt="">
+            <img id="animImg" class="absolute rounded-2xl" src="images/room.gif" alt="">
+        </div>
+        
+    </div>
+    <!-- end container -->
+</body>
+</html> 
